@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="row form-group">
+    <div class="col-2">
+      <h4>Search</h4>
+    </div>
+    <div class="col-6">
+      <input class="form-control" type="search" autocomplete="off" autofocus #search>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Designation</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeData; let i = index;">
+            <td>{{employee?.name}}</td>
+            <td>{{employee?.designation}}</td>
+            <td>{{employee?.salary}}</td>
+            <td>
+              <button class="btn btn-info mr-2" [routerLink]="'/' + i">Edit</button>
+              <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

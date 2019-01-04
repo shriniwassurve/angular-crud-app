@@ -1,0 +1,19 @@
+{
+  "employees": [
+    {
+      "name": "shri",
+      "designation": "devloper",
+      "salary": 40000
+    },
+    {
+      "name": "niwas",
+      "designation": "devloper",
+      "salary": 40000
+    },
+    {
+      "name": "surve",
+      "designation": "devloper",
+      "salary": 40000
+    }
+  ]
+}
