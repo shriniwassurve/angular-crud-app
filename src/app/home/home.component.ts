@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('search') search: ElementRef;
   dataMaster;
   employeeData: Employee[];
+  idForDelete;
+
   constructor(public dataService: DataService) { }
 
   ngOnInit() {
@@ -42,8 +44,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       });
   }
 
-  delete(index) {
-    this.dataService.employeeDataMaster.splice(index, 1);
+  setIdForDelete(index) {
+    this.idForDelete = index;
+  }
+
+  delete() {
+    this.dataService.employeeDataMaster.splice(this.idForDelete, 1);
   }
 
 }
